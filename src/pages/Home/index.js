@@ -5,10 +5,10 @@ import {
   Typography,
 } from '@material-ui/core';
 import { useEffect, useState } from 'react';
-import Character from '../components/Character/Index';
-import { getAllFetchCharacters } from '../helpers/getFetchData';
+import Character from '../../components/Character';
+import { getAllFetchCharacters } from '../../helpers/getFetchData';
 
-function App() {
+const Home = () => {
   const [characterList, setCharacterList] = useState([]);
   useEffect(() => {
     const getAllCharacter = async () => {
@@ -19,12 +19,12 @@ function App() {
   }, []);
 
   return (
-    <Container component={Box} pt={8}>
-      <Typography variant='h1' align="center">RICK AND MORTY CHARACTERS</Typography>
+    <Container component={Box} pt={4}>
+      <Typography variant='h1' align="center" >RICK AND MORTY</Typography>
       <Grid container spacing={8} align="center">
         {characterList.map((item) => (
-          <Grid item key={item} xs={12} sm={6} md={4} lg={3}>
-            <Character data={item} />
+          <Grid item key={item.id} xs={12} sm={6} md={4} lg={3}>
+            <Character data={item} showlink={true}/>
           </Grid>
         ))}
       </Grid>
@@ -32,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

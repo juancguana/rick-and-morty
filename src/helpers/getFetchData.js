@@ -4,4 +4,10 @@ const getAllFetchCharacters = async () => {
   return results;
 };
 
-export { getAllFetchCharacters };
+const getSingleFetchCharacter = async (id) => {
+  const resp = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+  const data = await resp.json();
+  return data;
+};
+
+export { getAllFetchCharacters, getSingleFetchCharacter };
