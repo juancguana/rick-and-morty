@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Rick and Morty App with Material-UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can see the live demo HERE -> [Rick and Morty App](https://juanguana.github.io/rick-and-morty/).
 
 ## Available Scripts
 
