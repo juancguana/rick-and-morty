@@ -10,13 +10,6 @@ import { getAllFetchCharacters } from '../../helpers/getFetchData';
 
 const Home = () => {
   const [characterList, setCharacterList] = useState([]);
-  useEffect(() => {
-    const getAllCharacter = async () => {
-      const data = await getAllFetchCharacters();
-      setCharacterList(data);
-    };
-    getAllCharacter();
-  }, []);
 
   return (
     <Container component={Box} pt={4}>
